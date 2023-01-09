@@ -1,0 +1,24 @@
+{
+    "project_name": "Awesome Sveltekit Project",
+    "description": "Behold {{ cookiecutter.project_name}} Project",
+    "version": "0.1.0",
+    "author_name": "Mohamed Nesredin",
+    "email": "{{ cookiecutter.author_name|lower|replace(' ', '-') }}@example.com",
+    "github_username": "Mohamed-Kaizen",
+    "use_playwright": "y",
+    "use_unocss": "y",
+    "use_sveu": "y",
+    "use_svelte_i18n": "y",
+    "use_unplugin_auto_import": "y",
+    "use_unplugin_svelte_components": "y",
+    "use_vitest": "y",
+    "license": [
+        "MIT",
+        "BSD-3",
+        "GPLv3",
+        "Apache Software License 2.0",
+        "ISCL",
+        "Mozilla Public License 2.0"
+      ],
+    "_copy_without_render": []
+}
