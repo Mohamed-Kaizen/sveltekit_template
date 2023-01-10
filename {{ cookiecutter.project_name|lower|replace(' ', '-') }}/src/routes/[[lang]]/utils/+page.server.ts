@@ -2,7 +2,6 @@ import { redirect } from "@sveltejs/kit"
 
 import type { Actions } from "./$types"
 
-/** @type {import('./$types').Actions} */
 export const actions: Actions = {
 	dir: async ({ cookies, request, locals }) => {
 		const dir = locals.dir === "ltr" ? "rtl" : "ltr"
@@ -35,7 +34,7 @@ export const actions: Actions = {
 
 		cookies.set("lang", lang)
 
-		if (lang === "ar") cookies.set("dir", "rtl")
+		if (RTL_LANGS.includes(lang)) cookies.set("dir", "rtl")
 		else cookies.set("dir", "ltr")
 
 		const referer = request.headers.get("referer")

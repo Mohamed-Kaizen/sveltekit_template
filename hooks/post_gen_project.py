@@ -39,10 +39,10 @@ def makedir(path: str) -> None:
 
 def checker() -> None:
     """Checking the project options and removing the unused files and folders."""
-    if "{{cookiecutter.use_svelte_i18n}}" != "y":
+    if "{{cookiecutter.use_typesafe_i18n}}" != "y":
         ALL_TEMP_FOLDERS.append("src/i18n")
+        ALL_TEMP_Files.append(".typesafe-i18n.json")
         ALL_TEMP_Files.append("src/routes/[[lang]]/+layout.ts")
-        ALL_TEMP_Files.append("src/routes/[[lang]]/+layout.server.ts")
 
     if "{{cookiecutter.use_playwright}}" != "y":
         ALL_TEMP_Files.append("playwright.config.ts")

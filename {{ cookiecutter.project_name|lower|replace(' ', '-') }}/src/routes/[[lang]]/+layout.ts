@@ -1,13 +1,12 @@
-import { browser } from "$app/environment"
-import "$i18n"
-
-import { locale, waitLocale } from "svelte-i18n"
+import { setLocale } from "$i18n/i18n-svelte"
+import { loadLocaleAsync } from "$i18n/i18n-util.async"
 
 import type { LayoutLoad } from "./$types"
 
 export const load: LayoutLoad = async ({ data }) => {
-	if (browser) {
-		locale.set(data.lang)
-	}
-	await waitLocale()
+	const lang = data.lang as Locales
+
+	await loadLocaleAsync(lang)
+
+	setLocale(lang)
 }

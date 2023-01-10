@@ -1,24 +1,22 @@
 import type { Handle } from "@sveltejs/kit"
 
-{% if cookiecutter.use_svelte_i18n == 'y' -%}import { locale } from "svelte-i18n"{%- endif %}
-
-/** @type {import('@sveltejs/kit').Handle} */
 export const langs: Handle = ({ event, resolve }) => {
 	let lang = event.cookies.get("lang")
 
 	let dir = event.cookies.get("dir")
 
 	if (!lang) {
-		lang = event.params.lang ?? DEFAULT_LANG
-		event.cookies.set("lang", lang)
+		const lang_param = event.params.lang ?? DEFAULT_LANG
+
+		lang = LANGS.includes(lang_param) ? lang_param : DEFAULT_LANG
+
+		event.cookies.set("lang", lang, { path: "/" })
 	}
 
 	if (!dir) {
-		dir = "ltr"
-		event.cookies.set("dir", dir)
+		dir = RTL_LANGS.includes(lang) ? "rtl" : "ltr"
+		event.cookies.set("dir", dir, { path: "/" })
 	}
-
-	{% if cookiecutter.use_svelte_i18n == 'y' -%}locale.set(lang){%- endif %}
 
 	event.locals.lang = lang
 

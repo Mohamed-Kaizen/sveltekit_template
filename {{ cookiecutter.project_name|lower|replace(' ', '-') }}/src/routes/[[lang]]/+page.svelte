@@ -1,9 +1,10 @@
-{% if cookiecutter.use_svelte_i18n == 'y' -%}
+{% if cookiecutter.use_typesafe_i18n == 'y' -%}
 <script lang="ts">
-	import { _ } from "svelte-i18n"
-
+	import { LL } from "$i18n/i18n-svelte"
 </script>
 
-{$_("hi")}
+<h1>{$LL.HI()}</h1>
+
+<a href="{$LL.LINK('/')}">Back to start</a>
 
 {%- endif %}

@@ -1,7 +1,7 @@
 /**
  * Toggle between themes
  *
- * @param theme
+ * @param theme - The theme to toggle to
  */
 export function theme_toggle(theme: string) {
 	if (document.documentElement.classList.contains(theme)) return
@@ -26,11 +26,14 @@ export function dir_toggle() {
 /**
  * Toggle between languages
  *
- * @param lang
+ * @param lang - The language to toggle to
  *
  */
 export function lang_toggle(lang: string) {
 	document.documentElement.setAttribute("lang", lang)
 
-	document.documentElement.setAttribute("dir", lang === "ar" ? "rtl" : "ltr")
+	document.documentElement.setAttribute(
+		"dir",
+		RTL_LANGS.includes(lang) ? "rtl" : "ltr"
+	)
 }

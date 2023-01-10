@@ -8,7 +8,7 @@
     "use_playwright": "y",
     "use_unocss": "y",
     "use_sveu": "y",
-    "use_svelte_i18n": "y",
+    "use_typesafe_i18n": "y",
     "use_unplugin_auto_import": "y",
     "use_unplugin_svelte_components": "y",
     "use_vitest": "y",

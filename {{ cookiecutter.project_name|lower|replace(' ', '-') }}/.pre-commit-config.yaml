@@ -16,5 +16,5 @@ repos:
       hooks:
           - id: lint
             name: Lint
-            entry: bash -c 'pnpm run lint:fix'
+            entry: bash -c 'pnpm run lint'
             language: system

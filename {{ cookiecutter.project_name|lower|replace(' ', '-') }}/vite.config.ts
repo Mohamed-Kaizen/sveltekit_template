@@ -25,6 +25,9 @@ const config: UserConfig = {
 			dts: "./src/auto-imports.d.ts",
 			imports: ["svelte", "svelte/store", "svelte/transition"],
 			dirs: ["./src/lib"],
+			eslintrc: {
+				enabled: true,
+			},
 		}),
 		{%- endif %}
 		{% if cookiecutter.use_unplugin_svelte_components == 'y' -%}
