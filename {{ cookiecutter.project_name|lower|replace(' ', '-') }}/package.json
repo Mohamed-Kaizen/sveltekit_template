@@ -56,7 +56,7 @@
 		"typescript": "^4.9.3",
 		{% if cookiecutter.use_unocss == 'y' -%}"unocss": "^0.48.1",{%- endif %}
 		{% if cookiecutter.use_unplugin_auto_import == 'y' -%}"unplugin-auto-import": "^0.12.1",{%- endif %}
-		{% if cookiecutter.use_unplugin_svelte_components == 'y' -%}"unplugin-svelte-components": "^0.2.5",{%- endif %}
+		{% if cookiecutter.use_unplugin_svelte_components == 'y' -%}"unplugin-svelte-components": "^0.2.6",{%- endif %}
 		{% if cookiecutter.use_vitest == 'y' -%}"vitest": "^0.25.3",{%- endif %}
 		"vite": "^4.0.0"
 	},
