@@ -12,5 +12,3 @@ declare namespace App {
 	// interface PageData {}
 	// interface Platform {}
 }
-
-{% if cookiecutter.use_typesafe_i18n == 'y' -%}type Locales = import("$i18n/i18n-types").Locales{%- endif %}

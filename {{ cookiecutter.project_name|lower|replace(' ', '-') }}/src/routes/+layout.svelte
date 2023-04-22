@@ -1,5 +1,7 @@
 <script lang="ts">
 	import "@unocss/reset/tailwind.css"
+
+	import "uno.css"
 </script>
 
 <header>
@@ -7,8 +9,6 @@
 	<Nav />
 </header>
 
-<main>
+<main class="font-poppins h-screen bg-gray-2 w-full p-8  dark:bg-black">
 	<slot />
 </main>
-
-<style uno:preflights uno:safelist global></style>

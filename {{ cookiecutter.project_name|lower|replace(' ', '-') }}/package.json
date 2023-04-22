@@ -1,7 +1,7 @@
 {
 	"name": "{{ cookiecutter.project_name|lower|replace(' ', '-') }}",
 	"version": "{{ cookiecutter.version }}",
-	"packageManager": "pnpm@7.22.0",
+	"packageManager": "pnpm@7.29.3",
 	"description": "{{ cookiecutter.description }}",
 	"author": "{{ cookiecutter.author_name }}<https://github.com/{{ cookiecutter.github_username }}>",
 	"license": "MIT",
@@ -31,34 +31,36 @@
 		"format": "prettier --plugin-search-dir . --write ."
 	},
 	"devDependencies": {
-		{% if cookiecutter.use_unocss == 'y' -%}"@iconify/json": "^2.2.3",{%- endif %}
-		{% if cookiecutter.use_playwright == 'y' -%}"@playwright/test": "^1.29.1",{%- endif %}
-		"@sveltejs/adapter-auto": "^1.0.0",
-		"@sveltejs/kit": "^1.0.0",
-		"@trivago/prettier-plugin-sort-imports": "^4.0.0",
-		"@typescript-eslint/eslint-plugin": "^5.45.0",
-		"@typescript-eslint/parser": "^5.45.0",
-		{% if cookiecutter.use_unocss == 'y' -%}"@unocss/reset": "^0.48.1",{%- endif %}
-		"eslint": "^8.28.0",
-		"eslint-config-prettier": "^8.5.0",
+		{% if cookiecutter.use_unocss == 'y' -%}"@iconify/json": "^2.2.54 ",{%- endif %}
+		{% if cookiecutter.use_playwright == 'y' -%}"@playwright/test": "^1.32.3",{%- endif %}
+		"@sveltejs/adapter-auto": "^2.0.0",
+		"@sveltejs/kit": "^1.15.7",
+		"@trivago/prettier-plugin-sort-imports": "^4.1.1",
+		"@typescript-eslint/eslint-plugin": "^5.59.0",
+		"@typescript-eslint/parser": "^5.59.0",
+		{% if cookiecutter.use_unocss == 'y' -%}"@unocss/reset": "^0.51.5",{%- endif %}
+		"eslint": "^8.39.0",
+		"eslint-config-prettier": "^8.8.0",
 		"eslint-plugin-svelte3": "^4.0.0",
 		"eslint-plugin-tsdoc": "^0.2.17",
-		"prettier": "^2.8.0",
-		"prettier-plugin-svelte": "^2.8.1",
-		"svelte": "^3.54.0",
-		"svelte-check": "^2.9.2",
+		"prettier": "^2.8.7",
+		"prettier-plugin-svelte": "^2.10.0",
+		"svelte": "^3.58.0",
+		"svelte-check": "^3.2.0",
 		{% if cookiecutter.use_sveu == 'y' -%}
-		"sveltecore": "^0.8.7",
-		"svelteshareds": "^1.1.0",
+		"@sveu/actions": "^0.5.0",
+		"@sveu/shared": "^0.10.0",
+		"@sveu/browser": "^0.20.0",
+		"@sveu/extend": "^0.4.0",
 		{%- endif %}
-		"tslib": "^2.4.1",
-		{% if cookiecutter.use_typesafe_i18n == 'y' -%}"typesafe-i18n": "^5.18.1",{%- endif %}
-		"typescript": "^4.9.3",
-		{% if cookiecutter.use_unocss == 'y' -%}"unocss": "^0.48.1",{%- endif %}
-		{% if cookiecutter.use_unplugin_auto_import == 'y' -%}"unplugin-auto-import": "^0.12.1",{%- endif %}
-		{% if cookiecutter.use_unplugin_svelte_components == 'y' -%}"unplugin-svelte-components": "^0.2.5",{%- endif %}
-		{% if cookiecutter.use_vitest == 'y' -%}"vitest": "^0.25.3",{%- endif %}
-		"vite": "^4.0.0"
+		"tslib": "^2.5.0",
+		{% if cookiecutter.use_typesafe_i18n == 'y' -%}"typesafe-i18n": "^5.24.3",{%- endif %}
+		"typescript": "^5.0.4",
+		{% if cookiecutter.use_unocss == 'y' -%}"unocss": "^0.51.5",{%- endif %}
+		{% if cookiecutter.use_unplugin_auto_import == 'y' -%}"unplugin-auto-import": "^0.15.3",{%- endif %}
+		{% if cookiecutter.use_unplugin_svelte_components == 'y' -%}"unplugin-svelte-components": "^0.2.6",{%- endif %}
+		{% if cookiecutter.use_vitest == 'y' -%}"vitest": "^0.30.1",{%- endif %}
+		"vite": "^4.3.1"
 	},
 	"type": "module"
 }
